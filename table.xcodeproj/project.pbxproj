@@ -13,6 +13,9 @@
 		D3D647F11A74A743004ECC34 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3D647F01A74A743004ECC34 /* Images.xcassets */; };
 		D3D647F41A74A743004ECC34 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3D647F21A74A743004ECC34 /* LaunchScreen.xib */; };
 		D3D648001A74A743004ECC34 /* tableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D647FF1A74A743004ECC34 /* tableTests.swift */; };
+		D3D6480A1A74A7AA004ECC34 /* TableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D648091A74A7AA004ECC34 /* TableVC.swift */; };
+		D3D6480C1A74A92E004ECC34 /* Unknown.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D3D6480B1A74A92E004ECC34 /* Unknown.jpeg */; };
+		D3D6480E1A74CE7E004ECC34 /* MyControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6480D1A74CE7E004ECC34 /* MyControllerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		D3D647F91A74A743004ECC34 /* tableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3D647FE1A74A743004ECC34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3D647FF1A74A743004ECC34 /* tableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableTests.swift; sourceTree = "<group>"; };
+		D3D648091A74A7AA004ECC34 /* TableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableVC.swift; sourceTree = "<group>"; };
+		D3D6480B1A74A92E004ECC34 /* Unknown.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Unknown.jpeg; sourceTree = "<group>"; };
+		D3D6480D1A74CE7E004ECC34 /* MyControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyControllerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +83,12 @@
 		D3D647E61A74A743004ECC34 /* table */ = {
 			isa = PBXGroup;
 			children = (
+				D3D6480B1A74A92E004ECC34 /* Unknown.jpeg */,
 				D3D647E91A74A743004ECC34 /* AppDelegate.swift */,
 				D3D647EB1A74A743004ECC34 /* ViewController.swift */,
 				D3D647ED1A74A743004ECC34 /* Main.storyboard */,
+				D3D648091A74A7AA004ECC34 /* TableVC.swift */,
+				D3D6480D1A74CE7E004ECC34 /* MyControllerViewController.swift */,
 				D3D647F01A74A743004ECC34 /* Images.xcassets */,
 				D3D647F21A74A743004ECC34 /* LaunchScreen.xib */,
 				D3D647E71A74A743004ECC34 /* Supporting Files */,
@@ -192,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3D6480C1A74A92E004ECC34 /* Unknown.jpeg in Resources */,
 				D3D647EF1A74A743004ECC34 /* Main.storyboard in Resources */,
 				D3D647F41A74A743004ECC34 /* LaunchScreen.xib in Resources */,
 				D3D647F11A74A743004ECC34 /* Images.xcassets in Resources */,
@@ -212,6 +222,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3D6480E1A74CE7E004ECC34 /* MyControllerViewController.swift in Sources */,
+				D3D6480A1A74A7AA004ECC34 /* TableVC.swift in Sources */,
 				D3D647EC1A74A743004ECC34 /* ViewController.swift in Sources */,
 				D3D647EA1A74A743004ECC34 /* AppDelegate.swift in Sources */,
 			);

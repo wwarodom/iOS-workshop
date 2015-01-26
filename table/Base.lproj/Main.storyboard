@@ -105,6 +105,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="sVB-sK-g2x">
+                        <barButtonItem key="leftBarButtonItem" title="Add2" id="t0C-uv-a6e">
+                            <connections>
+                                <segue destination="UKT-yc-d6r" kind="popoverPresentation" identifier="linkAdd2" popoverAnchorBarButtonItem="t0C-uv-a6e" id="P4T-BW-SMT">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add" id="U7c-uu-PPK">
                             <connections>
                                 <action selector="hitAdd:" destination="7rp-JT-hDP" id="l9h-9T-01d"/>
@@ -115,6 +122,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AM3-cX-R9p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1442" y="17"/>
+        </scene>
+        <!--Add2VC-->
+        <scene sceneID="yaT-oV-gOP">
+            <objects>
+                <viewController id="UKT-yc-d6r" customClass="Add2VC" customModule="table" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tii-T7-ZqB"/>
+                        <viewControllerLayoutGuide type="bottom" id="waG-bH-Pr5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ytg-1s-FZL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YW8-wc-CQQ">
+                                <rect key="frame" x="145" y="115" width="46" height="30"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickOK:" destination="UKT-yc-d6r" eventType="touchUpInside" id="F7O-F7-CTc"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QD1-Q0-Wlx">
+                                <rect key="frame" x="48" y="49" width="473" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtInputItem" destination="QD1-Q0-Wlx" id="9lU-Kd-1A3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pZv-cf-0DI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1442" y="834"/>
         </scene>
         <!--My Controller View Controller-->
         <scene sceneID="Fjk-fX-bJN">

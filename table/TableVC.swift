@@ -17,11 +17,14 @@ protocol TableVCDelegate {
     
 }
 
-class TableVC: UITableViewController {
+class TableVC: UITableViewController, Add2VCDelegate {
 
     var items = ["dog", "cat", "book","etc..."]
     
-
+    func selectText(str: String) {
+        items.append(str)
+        tableView.reloadData()
+    }
     
     
     @IBAction func updateLabel1(sender: AnyObject) {
@@ -118,6 +121,13 @@ class TableVC: UITableViewController {
             }
             //viewController.labelString = clickRow
             //viewController.delegate = self
+        }
+        
+        if "linkAdd2" == segue.identifier {
+                var viewController = segue.destinationViewController as Add2VC
+                // nothing has to send to popup view
+                viewController.delegate1 = self
+            
         }
     }
 

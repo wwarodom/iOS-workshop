@@ -9,7 +9,8 @@
 import UIKit
 
 protocol Add2VCDelegate {
-    func selectText(str: String	)
+    func selectText(str: String, str2: String)
+ 
     
 }
 
@@ -17,13 +18,19 @@ class Add2VC: UIViewController {
     
     var delegate1: Add2VCDelegate?
     var txtItem: String?
+    var txtStr2: String?
     
+    @IBOutlet weak var myTextView: UITextView!
     
     @IBOutlet weak var txtInputItem: UITextField!
     
     @IBAction func clickOK(sender: AnyObject) {
         txtItem = txtInputItem.text
-        delegate1?.selectText(txtItem!)
+        txtStr2 = myTextView.text
+        
+        delegate1?.selectText(txtItem!, str2: txtStr2!)
+        dismissViewControllerAnimated(true, completion: nil)
+        
     }
     
 

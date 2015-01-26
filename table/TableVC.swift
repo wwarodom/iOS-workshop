@@ -19,12 +19,22 @@ protocol TableVCDelegate {
 
 class TableVC: UITableViewController, Add2VCDelegate {
 
-    var items = ["dog", "cat", "book","etc..."]
+    var items = ["Name"]
+   var detailItems = ["Detail"]
     
-    func selectText(str: String) {
+    func selectText(str: String, str2: String) {
+        //var str3 = str + str2
+        detailItems.append(str2)
         items.append(str)
         tableView.reloadData()
+        
+        // Save to user default (persistence storage)
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(items, forKey: "items")
+        defaults.setObject(detailItems, forKey: "detailItems")
+        
     }
+    
     
     
     @IBAction func updateLabel1(sender: AnyObject) {
@@ -42,6 +52,20 @@ class TableVC: UITableViewController, Add2VCDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.estimatedRowHeight = 20
+        // NSUserDefaults.resetStandardUserDefaults()
+        
+        // Save to user default (persistence storage)
+        let defaults = NSUserDefaults.standardUserDefaults()
+        // defaults.setObject(items, forKey: "items")
+        if let savedItems = defaults.objectForKey("items") as? [String] {
+            items = savedItems
+        }
+        if let savedDetailItems = defaults.objectForKey("detailItems") as? [String] {
+            detailItems = savedDetailItems
+        }
+
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -75,7 +99,13 @@ class TableVC: UITableViewController, Add2VCDelegate {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell1", forIndexPath: indexPath) as UITableViewCell
         var label = cell.viewWithTag(1) as UILabel
         
+        var detailLabel = cell.viewWithTag(2) as UILabel
+        
         label.text = items[indexPath.row]
+        detailLabel.text = detailItems[indexPath.row]
+        
+        // label.text = items[indexPath.row] + "   " + detailItems[indexPath.row]
+        
         
 //        var identify = ""
 //        switch indexPath.row {

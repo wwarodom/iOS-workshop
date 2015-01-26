@@ -22,6 +22,23 @@ class TableVC: UITableViewController, Add2VCDelegate {
     var items = ["Name"]
    var detailItems = ["Detail"]
     
+    func loadDataJsonOnline() {
+        let url = NSURL(string: "https://dev.afourleaf.com/dining/example_json/")
+        let data = NSData(contentsOfURL: url!)
+        let json = JSON(data: data!)
+        
+        items.removeAll(keepCapacity: false)
+        detailItems.removeAll(keepCapacity: false)
+        for item in json["output"]{
+            var name = item.1["name"].string
+            var url	 = item.1["picture_url"].string
+          println("Name: " + name! + "\nDetail: " + url!)
+          //items.append(["name": name!, "detail": picture_url!])
+            items.append(name!)
+            detailItems.append(url!)
+        }
+    }
+    
     func selectText(str: String, str2: String) {
         //var str3 = str + str2
         detailItems.append(str2)
@@ -65,7 +82,7 @@ class TableVC: UITableViewController, Add2VCDelegate {
         if let savedDetailItems = defaults.objectForKey("detailItems") as? [String] {
             detailItems = savedDetailItems
         }
-
+        loadDataJsonOnline()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -207,7 +224,7 @@ class TableVC: UITableViewController, Add2VCDelegate {
     */
 
     @IBAction func hitAdd(sender: AnyObject) {
-        items.append("new value")
+        loadDataJsonOnline()
         tableView.reloadData()
     }
 }

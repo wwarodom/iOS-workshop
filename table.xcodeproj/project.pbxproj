@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D37832771A75DEB900F43D61 /* Add2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37832761A75DEB900F43D61 /* Add2VC.swift */; };
+		D37832791A76288A00F43D61 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37832781A76288A00F43D61 /* SwiftyJSON.swift */; };
 		D3D647EA1A74A743004ECC34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D647E91A74A743004ECC34 /* AppDelegate.swift */; };
 		D3D647EC1A74A743004ECC34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D647EB1A74A743004ECC34 /* ViewController.swift */; };
 		D3D647EF1A74A743004ECC34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3D647ED1A74A743004ECC34 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		D37832761A75DEB900F43D61 /* Add2VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Add2VC.swift; sourceTree = "<group>"; };
+		D37832781A76288A00F43D61 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		D3D647E41A74A743004ECC34 /* table.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = table.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3D647E81A74A743004ECC34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3D647E91A74A743004ECC34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		D3D647E61A74A743004ECC34 /* table */ = {
 			isa = PBXGroup;
 			children = (
+				D37832781A76288A00F43D61 /* SwiftyJSON.swift */,
 				D3D6480B1A74A92E004ECC34 /* Unknown.jpeg */,
 				D3D647E91A74A743004ECC34 /* AppDelegate.swift */,
 				D3D647EB1A74A743004ECC34 /* ViewController.swift */,
@@ -228,6 +231,7 @@
 				D3D6480E1A74CE7E004ECC34 /* MyControllerViewController.swift in Sources */,
 				D3D6480A1A74A7AA004ECC34 /* TableVC.swift in Sources */,
 				D3D647EC1A74A743004ECC34 /* ViewController.swift in Sources */,
+				D37832791A76288A00F43D61 /* SwiftyJSON.swift in Sources */,
 				D37832771A75DEB900F43D61 /* Add2VC.swift in Sources */,
 				D3D647EA1A74A743004ECC34 /* AppDelegate.swift in Sources */,
 			);

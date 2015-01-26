@@ -14,23 +14,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" rowHeight="40" id="wh6-hq-X40">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" rowHeight="55" id="wh6-hq-X40">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wh6-hq-X40" id="WfH-PR-0ud">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Detail" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gzg-pd-KMH">
-                                            <rect key="frame" x="139" y="-2" width="430" height="47"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIu-Wm-hLH">
                                             <rect key="frame" x="22" y="-2" width="96" height="43"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="104" id="GEx-Ki-3TD"/>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="fnE-vw-0iE"/>
                                             </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Detail" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gzg-pd-KMH">
+                                            <rect key="frame" x="139" y="-2" width="430" height="57"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -49,6 +49,13 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="Gzg-pd-KMH" secondAttribute="trailing" constant="23" id="tc0-iV-btC"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="BIu-Wm-hLH" secondAttribute="bottom" constant="-9" id="w5P-I4-uES"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="5dy-cj-asL"/>
+                                            <exclude reference="PRj-ej-hd8"/>
+                                            <exclude reference="Dd7-tt-LTr"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="cIr-lp-9Z5" kind="show" identifier="link" id="FJL-2a-PKX"/>
@@ -104,6 +111,11 @@
                                         <constraint firstItem="Yfz-gt-MSV" firstAttribute="top" secondItem="Akm-GP-jXn" secondAttribute="topMargin" constant="105" id="lDu-Xz-eFj"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="Yfz-gt-MSV" secondAttribute="bottom" constant="76" id="phL-F4-kXi"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="phL-F4-kXi"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -120,7 +132,7 @@
                                 </segue>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="U7c-uu-PPK">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="U7c-uu-PPK">
                             <connections>
                                 <action selector="hitAdd:" destination="7rp-JT-hDP" id="l9h-9T-01d"/>
                             </connections>
@@ -129,7 +141,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AM3-cX-R9p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1457" y="33.5"/>
+            <point key="canvasLocation" x="1457" y="33"/>
         </scene>
         <!--Add2VC-->
         <scene sceneID="yaT-oV-gOP">
